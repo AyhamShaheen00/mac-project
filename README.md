@@ -1,2 +1,2 @@
 # mac-project
-Cashier program
+A simple McDonald's cashier project
