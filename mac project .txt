@@ -1,0 +1,403 @@
+
+/*import java.io.File;
+import javax.swing.JOptionPane;
+import javafx.scene.text.FontWeight;
+import java.io.FileNotFoundException;
+import javafx.scene.text.FontPosture;
+import javafx.scene.shape.Circle;
+import javafx.scene.control.CheckBox;
+import javafx.scene.shape.Line;
+import javafx.scene.layout.Pane;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.RadioButton;
+import javafx.scene.shape.Rectangle;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import java.io.FileOutputStream;*/
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
+
+
+
+public class part3 extends Application {
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24,btn25,btn26;
+    Label lb1,lb2;
+    Image img1;
+    ImageView imgv1;
+    String [][] arr = {};
+    TextField txt,txt1,txt2,txt3,txt4;
+    String st0,st1,st2,st3,st4,st5,st6,st7,st8;
+    float x1,x2,x3,x4,total2=0,total_last=0;
+    String str1;
+    String total;
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        VBox box1 = new VBox();
+        HBox box2 = new HBox();
+        //LABEL
+         lb1 = new Label(" McDonald's");
+        Font f1 = new Font ("Arial Rounded MT Bold",165); 
+        Color c1 = Color.GOLD ;
+        lb1.setTextFill(c1);
+        lb1.setFont(f1);
+        lb1.setPrefSize(1000, 200);
+        lb1.setTranslateY(50);
+        //IMG
+         img1 = new Image ("file:///C:\\Users\\gts\\Pictures\\mac4.png");
+         imgv1 = new ImageView (img1);
+        imgv1.setFitWidth(450);
+        imgv1.setFitHeight(300);
+        imgv1.setTranslateX(1450);
+        imgv1.setTranslateY(-210);
+        //BUTTON
+         btn1 = new Button("Big Mac");
+         btn2 = new Button("McChicken");
+         btn3 = new Button("Big Tasty");
+         btn4 = new Button("Grand Chicken Deluxe");
+         btn5 = new Button("Grand Chicken Special");
+         btn6 = new Button("Double Big Tasty");
+         btn7 = new Button("Quarter Pounder");
+         btn8 = new Button("McRoyal");
+         btn9 = new Button("Grand Chicken Spicy");
+         btn10 = new Button("Chicken Mac");
+         btn11 = new Button("2 Cheese Burger");
+         btn12 = new Button("Spicy McChicken");
+         btn13 = new Button("Filet-O-Fish");
+         btn14 = new Button("Cheeseburger");
+         btn15 = new Button("Chickenburger");
+         btn16 = new Button("Double Cheeseburger");
+         btn17 = new Button("Beefburger");
+         btn18 = new Button("Chicken McNuggets");
+        //
+        btn1.setPrefSize(500, 250);
+        btn2.setPrefSize(500, 250);
+        btn3.setPrefSize(500, 250);
+        btn4.setPrefSize(500, 250);
+        btn5.setPrefSize(500, 250);
+        btn6.setPrefSize(500, 250);
+        btn7.setPrefSize(500, 250);
+        btn8.setPrefSize(500, 250);
+        btn9.setPrefSize(500, 350);
+        btn10.setPrefSize(500, 250);
+        btn11.setPrefSize(500, 250);
+        btn12.setPrefSize(500, 250);
+        btn13.setPrefSize(500, 250);
+        btn14.setPrefSize(500, 250);
+        btn15.setPrefSize(500, 250);
+        btn16.setPrefSize(500, 250);
+        btn17.setPrefSize(500, 250);
+        btn18.setPrefSize(500, 250);
+        //
+        btn1.setTranslateY(-150);
+        btn2.setTranslateY(-150);
+        btn3.setTranslateY(-150);
+        btn4.setTranslateY(-150);
+        btn5.setTranslateY(-150);
+        btn6.setTranslateY(-150);
+        btn7.setTranslateY(-150);
+        btn8.setTranslateY(-150);
+        btn9.setTranslateY(-150);
+        btn10.setTranslateY(-654);
+        btn10.setTranslateX(500);
+        btn11.setTranslateY(-654);
+        btn11.setTranslateX(500);
+        btn12.setTranslateY(-654);
+        btn12.setTranslateX(500);
+        btn13.setTranslateY(-654);
+        btn13.setTranslateX(500);
+        btn14.setTranslateY(-654);
+        btn14.setTranslateX(500);
+        btn15.setTranslateY(-654);
+        btn15.setTranslateX(500);
+        btn16.setTranslateY(-654);
+        btn16.setTranslateX(500);
+        btn17.setTranslateY(-654);
+        btn17.setTranslateX(500);
+        btn18.setTranslateY(-654);
+        btn18.setTranslateX(500);
+        //
+        Font f2 = new Font ("Arial Black",25); 
+        Color c2 = Color.ORANGE;
+        btn1.setFont(f2);
+        btn1.setTextFill(c2);
+        btn2.setFont(f2);
+        btn2.setTextFill(c2);
+        btn3.setFont(f2);
+        btn3.setTextFill(c2);
+        btn4.setFont(f2);
+        btn4.setTextFill(c2);
+        btn5.setFont(f2);
+        btn5.setTextFill(c2);
+        btn6.setFont(f2);
+        btn6.setTextFill(c2);
+        btn7.setFont(f2);
+        btn7.setTextFill(c2);
+        btn8.setFont(f2);
+        btn8.setTextFill(c2);
+        btn9.setFont(f2);
+        btn9.setTextFill(c2);
+        btn10.setFont(f2);
+        btn10.setTextFill(c2);
+        btn11.setFont(f2);
+        btn11.setTextFill(c2);
+        btn12.setFont(f2);
+        btn12.setTextFill(c2);
+        btn13.setFont(f2);
+        btn13.setTextFill(c2);
+        btn14.setFont(f2);
+        btn14.setTextFill(c2);
+        btn15.setFont(f2);
+        btn15.setTextFill(c2);
+        btn16.setFont(f2);
+        btn16.setTextFill(c2);
+        btn17.setFont(f2);
+        btn17.setTextFill(c2);
+        btn18.setFont(f2);
+        btn18.setTextFill(c2);
+        //
+        btn19 = new Button("Small");
+        btn20 = new Button("Medium");
+        btn21 = new Button("Large");
+        btn22 = new Button("DELETE");
+        btn23 = new Button("ADD");
+        btn24 = new Button("DELETE ORDER");
+        btn25 = new Button("END");
+        btn26 = new Button("NEXT ORDER");
+       //
+       btn19.setPrefSize(250,250);
+       btn20.setPrefSize(250,250);
+       btn21.setPrefSize(250,250);
+       btn22.setPrefSize(250,250);
+       btn23.setPrefSize(250,250);
+       btn24.setPrefSize(250,250);
+       btn25.setPrefSize(250,250);
+       btn26.setPrefSize(250,250);
+       //
+       btn19.setFont(f2);
+       btn19.setTextFill(c2);
+       btn20.setFont(f2);
+       btn20.setTextFill(c2);
+       btn21.setFont(f2);
+       btn21.setTextFill(c2);
+       btn22.setFont(f2);
+       btn22.setTextFill(c2);
+       btn23.setFont(f2);
+       btn23.setTextFill(c2);
+       btn24.setFont(f2);
+       btn24.setTextFill(c2);
+       btn25.setFont(f2);
+       btn25.setTextFill(c2);
+       btn26.setFont(f2);
+       btn26.setTextFill(c2);
+       //
+       btn19.setTranslateX(1010);
+       btn19.setTranslateY(-1157);
+       btn20.setTranslateX(1010);
+       btn20.setTranslateY(-1157);
+       btn21.setTranslateX(1010);
+       btn21.setTranslateY(-1157);
+       btn22.setTranslateX(1010);
+       btn22.setTranslateY(-1045);
+       btn23.setTranslateX(1010);
+       btn23.setTranslateY(-1045);
+       btn24.setTranslateX(1010);
+       btn24.setTranslateY(-1045);
+       btn25.setTranslateX(1010);
+       btn25.setTranslateY(-1045);
+       btn26.setTranslateX(377);
+       btn26.setTranslateY(-1000);
+       //
+       txt = new TextField();
+       txt.setTranslateX(1270);
+       txt.setTranslateY(-1604);
+       txt.setPrefSize(50,150);
+       txt1 = new TextField();
+       txt1.setTranslateX(1600);
+       txt1.setTranslateY(-1635);
+       txt1.setPrefSize(150, 35);
+       txt2 = new TextField();
+       txt2.setTranslateX(1800);
+       txt2.setTranslateY(-1666);
+       txt2.setPrefSize(50,150);
+       txt3 = new TextField();
+       txt3.setTranslateY(-1643);
+       txt3.setTranslateX(1270);
+       txt4 = new TextField();
+       txt4.setTranslateY(-1200);
+       txt4.setTranslateX(1270);
+       //
+       btn1.setOnMouseClicked(e -> {
+        txt.setText(btn1.getText());
+       });
+       btn2.setOnMouseClicked(e -> {
+        txt.setText(btn2.getText());
+       });
+       btn3.setOnMouseClicked(e -> {
+        txt.setText(btn3.getText());
+       });
+       btn4.setOnMouseClicked(e -> {
+        txt.setText(btn4.getText());
+       });
+       btn5.setOnMouseClicked(e -> {
+        txt.setText(btn5.getText());
+       });
+       btn6.setOnMouseClicked(e -> {
+        txt.setText(btn6.getText());
+       });
+       btn7.setOnMouseClicked(e -> {
+        txt.setText(btn7.getText());
+       });
+       btn8.setOnMouseClicked(e -> {
+        txt.setText(btn8.getText());
+       });
+       btn9.setOnMouseClicked(e -> {
+        txt.setText(btn9.getText());
+       });
+       btn10.setOnMouseClicked(e -> {
+        txt.setText(btn10.getText());
+       });
+       btn11.setOnMouseClicked(e -> {
+        txt.setText(btn11.getText());
+       });
+       btn12.setOnMouseClicked(e -> {
+        txt.setText(btn12.getText());
+       });
+       btn13.setOnMouseClicked(e -> {
+        txt.setText(btn13.getText());
+       });
+       btn14.setOnMouseClicked(e -> {
+        txt.setText(btn14.getText());
+       });
+       btn15.setOnMouseClicked(e -> {
+        txt.setText(btn15.getText());
+       });
+       btn16.setOnMouseClicked(e -> {
+        txt.setText(btn16.getText());
+       });
+       btn17.setOnMouseClicked(e -> {
+        txt.setText(btn17.getText());
+       });
+       btn18.setOnMouseClicked(e -> {
+        txt.setText(btn18.getText());
+       });
+     
+       btn19.setOnMouseClicked(e -> {
+        txt1.setText(btn19.getText());
+       });
+       btn20.setOnMouseClicked(e -> {
+        txt1.setText(btn20.getText());
+       });
+       btn21.setOnMouseClicked(e -> {
+        txt1.setText(btn21.getText());
+       });
+       //
+       btn22.setVisible(false);
+       btn24.setVisible(false);
+        btn23.setOnMouseClicked((MouseEvent e) -> {
+            str1 = txt1.getText();
+            switch (str1) {
+                case "Small":
+                    float x5 = Integer.parseInt(txt2.getText());
+                    float x6 = (float) (x5*1.9);
+                    st4 = Float.toString((float)x6);
+                    txt3.setText(st4); 
+                    total = txt3.getText();
+                    x3 = Float.parseFloat(total);
+                    total2 = total2+x3;
+                    break;
+                case "Medium":
+                    float x7 = Integer.parseInt(txt2.getText());
+                    float x8 = (float) (x7*2.10);
+                    st4 = Float.toString((float)x8);
+                    txt3.setText(st4);
+                    total = txt3.getText();
+                    x3 = Float.parseFloat(total);
+                    total2 = total2+x3;
+                    break;
+                case "Large":
+                    float x9 = Integer.parseInt(txt2.getText());
+                    float x10 = (float) (x9*2.5);
+                    st4 = Float.toString((float)x10);
+                    txt3.setText(st4);
+                    total = txt3.getText();
+                    x3 = Float.parseFloat(total);
+                    total2 = total2+x3;
+                    break;
+                default:
+                    break;
+            }
+            total_last = +total2;
+            //just test *_*
+            System.out.println(total_last);
+            txt2.setText(st0);
+            
+        });
+       
+      btn24.setOnMouseClicked(e -> {
+            st0 = " ";
+            st1 = txt.getText();
+            txt.setText(st0);
+            st2 = txt1.getText();
+            txt1.setText(st0);
+            st3 = txt2.getText();
+            txt2.setText(st0);
+            st5 =txt2.getText();
+            txt3.setText(st0);
+            total_last =0;
+            
+            
+        }); 
+       btn25.setOnMouseClicked(e -> {
+            st6 = Float.toString(total_last);
+            txt4.setText(st6);
+            st0 = " ";
+            st1 = txt.getText();
+            txt.setText(st0);
+            st2 = txt1.getText();
+            txt1.setText(st0);
+            st3 = txt2.getText();
+            txt2.setText(st0);
+        }); 
+       btn26.setOnMouseClicked(e -> {
+            st6 = Float.toString(total_last);
+            txt4.setText(st6);
+            st0 = " ";
+            st1 = txt.getText();
+            txt.setText(st0);
+            st2 = txt1.getText();
+            txt1.setText(st0);
+            st3 = txt2.getText();
+            txt2.setText(st0);
+        }); 
+
+       
+       
+       box1.getChildren().addAll(lb1,imgv1,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12);
+       box1.getChildren().addAll(btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24,btn25,btn26,txt,txt1,txt2,txt3,txt4);
+        
+        Scene scene1 = new Scene (box1 , 1500 , 1500); 
+       
+        
+        primaryStage.setTitle("FIRST PROJECT");
+        primaryStage.setScene(scene1);
+        primaryStage.show();
+        
+    }
+
+    
+ }
